@@ -52,8 +52,8 @@ class SalesController extends Controller
      */
     public function show($id)
     {
-        $produk = Sales::where('id', $id)->first();
-        return view('profil_sales', ['sales'=>$produk]);
+        $sales= Sales::where('id', $id)->first();
+        return view('profil_sales', ['sales'=>$sales]);
     }
 
     /**
@@ -77,11 +77,11 @@ class SalesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $produk = Sales::find($id);
-        $produk->nama = $request->nama;
-        $produk->alamat = $request->alamat;
-        $produk->tgl_lahir = $request->tgl_lahir;
-        $produk->save();
+        $sales = Sales::find($id);
+        $sales->nama = $request->nama;
+        $sales->alamat = $request->alamat;
+        $sales->tgl_lahir = $request->tgl_lahir;
+        $sales->save();
 
         return redirect()->route('sales.index');
     }
@@ -94,8 +94,8 @@ class SalesController extends Controller
      */
     public function destroy(Sales $id)
     {
-        $produk = Sales::find($id);
-        $produk->delete();
+        $sales = Sales::find($id);
+        $sales->delete();
 
         return redirect()->route('sales.index');
     }
