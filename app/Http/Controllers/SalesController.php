@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Sales;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class SalesController extends Controller
 {
