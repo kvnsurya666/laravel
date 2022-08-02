@@ -1,0 +1,1 @@
+@extends('CJL.layouts.template')
