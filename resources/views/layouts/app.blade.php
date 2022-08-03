@@ -9,6 +9,9 @@
 
     <title>Cipta Jaya Lestari</title>
 
+    {{-- Favicon --}}
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
